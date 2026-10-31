@@ -11,6 +11,10 @@
            fetch="https://github.com/yaap"
            revision="refs/heads/seventeen" />
 
+  <remote  name="danyaap"
+           fetch="https://github.com/danyaap-ext"
+           revision="refs/heads/seventeen" />
+
   <!-- General -->
   <project path="art" name="art" remote="yaap" />
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="yaap" />
@@ -29,14 +33,14 @@
    <linkfile src="target" dest="build/target" />
    <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" remote="yaap" >
+  <project path="build/soong" name="build_soong" remote="danyaap" >
    <linkfile src="root.bp" dest="Android.bp" />
    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Device -->
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="yaap" />
-  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="yaap" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="danyaap" />
+  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="danyaap" />
   <project path="device/qcom/sepolicy_vndr/legacy-um" name="device_qcom_sepolicy_vndr_legacy-um" remote="yaap" />
   <project path="device/qcom/sepolicy_vndr/sm8650" name="device_qcom_sepolicy_vndr_sm8650" remote="yaap" />
 
@@ -80,7 +84,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" remote="yaap" />
-  <project path="frameworks/base" name="frameworks_base" remote="yaap" />
+  <project path="frameworks/base" name="frameworks_base" remote="danyaap" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="yaap" />
   <project path="frameworks/minikin" name="frameworks_minikin" remote="yaap" />
   <project path="frameworks/native" name="frameworks_native" remote="yaap" />
@@ -94,7 +98,7 @@
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="yaap" />
   <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="yaap" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="yaap" />
-  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="yaap" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="danyaap" />
   <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="yaap" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="yaap" />
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="yaap" />
@@ -179,15 +183,15 @@
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="yaap" />
   <project path="packages/apps/Ripple" name="CalyxOS/platform_packages_apps_Ripple" remote="github" revision="android15-qpr2" />
   <project path="packages/apps/Seedvault" name="packages_apps_Seedvault" remote="yaap" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="yaap" />
-  <project path="packages/apps/Settings/YASP" name="packages_apps_YASP" remote="yaap" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="danyaap" />
+  <project path="packages/apps/Settings/YASP" name="packages_apps_YASP" remote="danyaap" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="yaap" />
-  <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="yaap" />
+  <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="danyaap" />
   <project path="packages/apps/SimpleDeviceConfig" name="packages_apps_SimpleDeviceConfig" remote="yaap" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" remote="yaap" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="yaap" />
   <project path="packages/apps/TV" name="packages_apps_TV" remote="yaap" />
-  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="yaap" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="danyaap" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="yaap" />
   <project path="packages/modules/adb" name="packages_modules_adb" remote="yaap" />
   <project path="packages/modules/AdServices" name="packages_modules_AdServices" remote="yaap" />
@@ -250,7 +254,7 @@
   <project path="vendor/google/pixel" name="yaosp/vendor_google_pixel" remote="gitlab" revision="seventeen" clone-depth="1" />
   <project path="vendor/microg" name="vendor_microg" remote="yaap" />
   <project path="vendor/themes" name="vendor_themes" remote="yaap" />
-  <project path="vendor/yaap" name="vendor_yaap" remote="yaap" />
+  <project path="vendor/yaap" name="vendor_yaap" remote="danyaap" />
   <project path="vendor/yaap/apps" name="vendor_yaap_apps" remote="yaap" clone-depth="1" />
 
 </manifest>

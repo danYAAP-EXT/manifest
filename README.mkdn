@@ -1,28 +1,62 @@
-YAAP
-==============
+<div align="center">
 
-Getting Started
----------------
+![danYAAP](https://raw.githubusercontent.com/danYAAP-EXT/.github/refs/heads/main/profile/1.png)
 
-To get started with Android, you'll need to get
-familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+# danYAAP
 
-To initialize your local repository using the YAAP trees, use a command like this:
+**A Forked AOSP Custom ROM based on YAAP**
 
+</div>
+
+## 🛠️ Getting Started
+
+### 1. Initialize local repository
 ```bash
-repo init -u https://github.com/yaap/manifest.git -b seventeen --git-lfs
-```
-Then to sync up:
-```bash
-repo sync -j$(nproc --all) --no-tags --no-clone-bundle --current-branch
+repo init -u https://github.com/danYAAP-EXT/manifest -b seventeen --git-lfs
 ```
 
-Building the source
----------------
-
-The source at YAAP is well configured for building.
-
+### 2. Sync up
 ```bash
-source build/envsetup.sh
-lunch yaap_device-user && m yaap
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+
+---
+
+## ⚙️ Build Flags
+
+You can customize your build by defining the following flags in your device makefile (e.g., `device.mk` or `yaap_<device>.mk`):
+
+### 📦 GApps Configuration
+To include GMS (GApps) in your build:
+```makefile
+TARGET_BUILD_GAPPS := true
+```
+
+### 👤 Maintainer Information
+To set the maintainer name shown in About Phone:
+```makefile
+# Example:
+TARGET_MAINTAINER := "vlxlxlv"
+
+# Usage (replace with your name):
+TARGET_MAINTAINER := "<your_name>"
+```
+
+---
+
+## 🏗️ Building
+
+### 1. Set up the build environment
+```bash
+. build/envsetup.sh
+```
+
+### 2. Lunch a target
+```bash
+lunch yaap_<device_codename>-cp2a-userdebug
+```
+
+### 3. Start compiling
+```bash
+m yaap
 ```
