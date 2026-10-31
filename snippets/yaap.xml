@@ -99,7 +99,7 @@
   <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="yaap" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="yaap" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="danyaap" />
-  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="yaap" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="danyaap" />
   <project path="hardware/mediatek" name="hardware_mediatek" remote="danyaap" />
   <project path="hardware/interfaces" name="hardware_interfaces" remote="yaap" />
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="yaap" />
