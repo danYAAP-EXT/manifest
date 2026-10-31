@@ -22,17 +22,17 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ---
 
-## ⚙️ Build Flags
+## Build Flags
 
 You can customize your build by defining the following flags in your device makefile (e.g., `device.mk` or `yaap_<device>.mk`):
 
-### 📦 GApps Configuration
+### GApps Configuration
 To include GMS (GApps) in your build:
 ```makefile
 TARGET_BUILD_GAPPS := true
 ```
 
-### 👤 Maintainer Information
+### Maintainer Information
 To set the maintainer name shown in About Phone:
 ```makefile
 # Example:
@@ -44,7 +44,7 @@ TARGET_MAINTAINER := "<your_name>"
 
 ---
 
-## 🏗️ Building
+## Building
 
 ### 1. Set up the build environment
 ```bash
